@@ -17,6 +17,6 @@ const RemarkLowlight = languageDefinitions => {
   };
 
   return Code;
-}
+};
 
 export default RemarkLowlight;
