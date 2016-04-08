@@ -1,7 +1,7 @@
 import React from 'react';
 import Lowlight from 'react-lowlight';
 
-const RemarkLowlight = languageDefinitions => {
+export default (languageDefinitions) => {
   Object.keys(languageDefinitions).forEach(language => {
     const definition = languageDefinitions[language];
 
@@ -18,5 +18,3 @@ const RemarkLowlight = languageDefinitions => {
 
   return Code;
 };
-
-export default RemarkLowlight;
