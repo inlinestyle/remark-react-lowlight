@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "watch": "babel src --watch -d lib",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js --ext .jsx",
     "preversion": "npm run lint && npm run build && git commit --allow-empty -am \"Update lib\""
   },
   "main": "lib/index.js",
