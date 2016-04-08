@@ -1,6 +1,6 @@
 {
   "name": "remark-react-lowlight",
-  "description": "...",
+  "description": "Syntax highlighting for remark-react through lowlight",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "version": "0.0.0",
   "scripts": {
