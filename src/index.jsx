@@ -8,9 +8,14 @@ export default (languageDefinitions) => {
     Lowlight.registerLanguage(language, definition);
   });
 
-  const Code = ({ className, children }) => (
-    <Lowlight language={className.split('-')[1]} value={children} />
-  );
+  const Code = ({ className = '', children }) => {
+    const language = className.split('-')[1] || '';
+    const value = children[0] || '';
+    const props = { language, value };
+    return (
+      <Lowlight {...props} />
+    );
+  };
   Code.propTypes = {
     className: React.PropTypes.string,
     children: React.PropTypes.node
