@@ -5,6 +5,9 @@
 // Copy this file, and add rule overrides as needed.
 {
   "extends": "airbnb/base",
+  "env": {
+    "mocha": true
+  },
 
   /**
    * Overrides to the airbnb rules
