@@ -28,7 +28,9 @@ const schema = merge(sanitizeGhSchema, { attributes: { 'code': ['className'] } }
 ...
 ```
 
-> You can see *remark-react-lowlight* in use at [react-component-boilerplate](https://github.com/survivejs/react-component-boilerplate).
+## Contributors
+
+* [Ryota](https://github.com/rkaneko) - Fixed `props` for the lowlight component. #1
 
 ## License
 
