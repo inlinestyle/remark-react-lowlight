@@ -11,7 +11,7 @@ const mdToReact = (markdown) => {
   const schema = merge(sanitizeGhSchema, { attributes: { code: ['className'] } });
   return remark().use(reactRenderer, {
     sanitize: schema,
-    remarkComponents: {
+    remarkReactComponents: {
       // eslint-disable-next-line new-cap
       code: RemarkLowlight({
         js
