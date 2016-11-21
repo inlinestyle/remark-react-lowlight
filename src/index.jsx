@@ -12,9 +12,7 @@ export default (languageDefinitions) => {
     const language = className.split('-')[1] || '';
     const value = children[0] || '';
     const props = { language, value };
-    return (
-      <Lowlight {...props} />
-    );
+    return language ? <Lowlight {...props} /> : <code>{ value }</code>;
   };
   Code.propTypes = {
     className: React.PropTypes.string,
