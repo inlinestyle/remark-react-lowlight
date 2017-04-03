@@ -8,7 +8,17 @@
   "env": {
     "mocha": true
   },
-
+  "globals": {
+    "document": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
   /**
    * Overrides to the airbnb rules
    */

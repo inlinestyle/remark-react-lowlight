@@ -8,7 +8,7 @@
     "watch": "babel src --watch -d lib",
     "lint": "eslint . --ext .js --ext .jsx",
     "preversion": "npm run lint && npm run build && git commit --allow-empty -am \"Update lib\"",
-    "test": "mocha --require test/setup.js --compilers js:babel-register"
+    "test": "npm run lint && mocha --require test/setup.js --compilers js:babel-register"
   },
   "main": "lib/index.js",
   "dependencies": {

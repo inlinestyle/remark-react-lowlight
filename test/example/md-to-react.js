@@ -5,7 +5,7 @@ import merge from 'deepmerge';
 import sanitizeGhSchema from 'hast-util-sanitize/lib/github.json';
 import js from 'highlight.js/lib/languages/javascript';
 
-import RemarkLowlight from '../../lib/index.js';
+import RemarkLowlight from '../../lib';
 
 const mdToReact = (markdown) => {
   const schema = merge(sanitizeGhSchema, { attributes: { code: ['className'] } });

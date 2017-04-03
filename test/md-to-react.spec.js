@@ -2,7 +2,7 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 import { mount } from 'enzyme';
 import assert from 'assert';
 
-import mdToReact from './example/md-to-react.js';
+import mdToReact from './example/md-to-react';
 
 describe('mdToReact', () => {
 
