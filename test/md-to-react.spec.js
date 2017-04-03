@@ -5,7 +5,6 @@ import assert from 'assert';
 import mdToReact from './example/md-to-react';
 
 describe('mdToReact', () => {
-
   it('render code block element using highlight.js', () => {
     const codeBlockText = 'function blah(arg1) {};';
     const inputMarkdown = `
@@ -17,7 +16,6 @@ ${codeBlockText}
     const actual = mdToReact(inputMarkdown);
     const wrapper = mount(actual);
 
-    assert.ok(wrapper.find('pre').last().hasClass('lowlight'));
     assert.ok(wrapper.find('code').hasClass('hljs'));
   });
 
