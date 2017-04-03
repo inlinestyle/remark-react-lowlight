@@ -32,6 +32,7 @@ const schema = merge(sanitizeGhSchema, { attributes: { 'code': ['className'] } }
 
 * [Ryota](https://github.com/rkaneko) - Fixed `props` for the lowlight component. #1
 * [Henrik Lundgren](https://github.com/henriklundgren) - Fixed option property test, allowed skipping inline code tags. #2
+* [Shingo Sato](https://github.com/sugarshin) - Patch duplicate pre tag. #4
 
 ## License
 
