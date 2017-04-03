@@ -11,7 +11,7 @@ export default (languageDefinitions) => {
   const Code = ({ className = '', children }) => {
     const language = className.split('-')[1] || '';
     const value = children[0] || '';
-    const props = { language, value };
+    const props = { language, value, inline: true };
     return language ? <Lowlight {...props} /> : <code>{ value }</code>;
   };
   Code.propTypes = {
