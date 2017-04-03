@@ -1,3 +1,5 @@
+[![build status](https://secure.travis-ci.org/bebraw/remark-react-lowlight.svg)](http://travis-ci.org/bebraw/remark-react-lowlight) [![bitHound Score](https://www.bithound.io/github/bebraw/remark-react-lowlight/badges/score.svg)](https://www.bithound.io/github/bebraw/remark-react-lowlight) [![Dependency Status](https://david-dm.org/bebraw/remark-react-lowlight.svg)](https://david-dm.org/bebraw/remark-react-lowlight)
+
 # remark-react-lowlight - Syntax highlighting for remark-react through lowlight
 
 **Usage:**
