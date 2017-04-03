@@ -9,6 +9,7 @@ import RemarkLowlight from '../../lib/index.js';
 
 const mdToReact = (markdown) => {
   const schema = merge(sanitizeGhSchema, { attributes: { code: ['className'] } });
+
   return remark().use(reactRenderer, {
     sanitize: schema,
     remarkReactComponents: {
@@ -17,7 +18,7 @@ const mdToReact = (markdown) => {
         js
       })
     }
-  }).process(markdown).contents;
+  }).processSync(markdown).contents;
 };
 
 export default mdToReact;

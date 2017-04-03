@@ -24,7 +24,7 @@ const schema = merge(sanitizeGhSchema, { attributes: { 'code': ['className'] } }
       js
     })
   }
-}).process(readme).contents}
+}).processSync(readme).contents}
 ...
 ```
 
