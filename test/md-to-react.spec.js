@@ -19,9 +19,15 @@ ${codeBlockText}
     assert.ok(wrapper.find('code').hasClass('hljs'));
   });
 
-  it('should skip elements without defined language', () => {
-    const markdown = 'foo `bar` baz';
+  it('should not fail if the defined language is not registered', () => {
+    const markdown = '```ruby\na = 1```';
     const wrapper = mount(mdToReact(markdown));
-    assert.ok(wrapper.contains(<code>bar</code>));
+    assert.ok(wrapper.find('code').hasClass('hljs'));
+  });
+
+  it('should guess the language if it is not defined', () => {
+    const markdown = '```.test { height: 1em; }```';
+    const wrapper = mount(mdToReact(markdown));
+    assert.ok(wrapper.find('code').hasClass('hljs') && wrapper.find('code').hasClass('css'));
   });
 });

@@ -18,7 +18,7 @@ export default (languageDefinitions) => {
       props.language = language;
     }
 
-    return <Lowlight {...props} /> ;
+    return <Lowlight {...props} />;
   };
   Code.propTypes = {
     className: React.PropTypes.string,

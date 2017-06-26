@@ -4,6 +4,7 @@ import reactRenderer from 'remark-react';
 import merge from 'deepmerge';
 import sanitizeGhSchema from 'hast-util-sanitize/lib/github.json';
 import js from 'highlight.js/lib/languages/javascript';
+import css from 'highlight.js/lib/languages/css';
 
 import RemarkLowlight from '../../lib';
 
@@ -15,7 +16,8 @@ const mdToReact = (markdown) => {
     remarkReactComponents: {
       // eslint-disable-next-line new-cap
       code: RemarkLowlight({
-        js
+        js,
+        css
       })
     }
   }).processSync(markdown).contents;
