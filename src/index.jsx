@@ -11,9 +11,14 @@ export default (languageDefinitions) => {
   const Code = ({ className = '', children }) => {
     const language = className.split('-')[1] || '';
     const value = children[0] || '';
-    const props = { language, value, inline: true };
+    const props = { value, inline: true };
 
-    return language ? <Lowlight {...props} /> : <code>{ value }</code>;
+    if (Object.keys(languageDefinitions).indexOf(language) > -1) {
+      // Include the language only if it was previously registered
+      props.language = language;
+    }
+
+    return <Lowlight {...props} />;
   };
   Code.propTypes = {
     className: React.PropTypes.string,
