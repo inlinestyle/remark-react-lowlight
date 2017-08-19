@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Lowlight from 'react-lowlight';
 
 export default (languageDefinitions) => {
@@ -21,8 +22,8 @@ export default (languageDefinitions) => {
     return <Lowlight {...props} />;
   };
   Code.propTypes = {
-    className: React.PropTypes.string,
-    children: React.PropTypes.node
+    className: PropTypes.string,
+    children: PropTypes.node
   };
 
   return Code;
