@@ -33,5 +33,6 @@
     // http://eslint.org/docs/rules/no-unused-vars.html
     "no-unused-vars": [1, {"vars": "all", "args": "after-used"}],
     "padded-blocks": [0, "always"],
+    "react/jsx-uses-react": 2
   }
 }
