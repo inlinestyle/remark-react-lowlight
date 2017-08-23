@@ -1,6 +1,7 @@
 [![build status](https://secure.travis-ci.org/bebraw/remark-react-lowlight.svg)](http://travis-ci.org/bebraw/remark-react-lowlight) [![bitHound Score](https://www.bithound.io/github/bebraw/remark-react-lowlight/badges/score.svg)](https://www.bithound.io/github/bebraw/remark-react-lowlight) [![Dependency Status](https://david-dm.org/bebraw/remark-react-lowlight.svg)](https://david-dm.org/bebraw/remark-react-lowlight)
 
-# **remark-react-lowlight** - Syntax highlighting for **remark-react** through **lowlight**
+# `remark-react-lowlight`
+## Syntax highlighting for [`remark-react`](https://github.com/mapbox/remark-react) through [`lowlight`](https://github.com/wooorm/lowlight)
 
 **Usage:**
 
@@ -29,6 +30,9 @@ const schema = merge(sanitizeGhSchema, { attributes: { 'code': ['className'] } }
 }).processSync(readme).contents}
 ...
 ```
+
+Notes
+- The default santization schema (GitHub's) excludes `className`, but we want those `hljs-*` classes for our highlighting! Hence the custom object passed to `santization`.
 
 ## Contributors
 
