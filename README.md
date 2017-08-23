@@ -33,6 +33,7 @@ const schema = merge(sanitizeGhSchema, { attributes: { 'code': ['className'] } }
 
 Notes
 - The default santization schema (GitHub's) excludes `className`, but we want those `hljs-*` classes for our highlighting! Hence the custom object passed to `santization`.
+- You'll need stylings for the classes that [Highlight.js](https://github.com/isagalaev/highlight.js) adds. You can choose from a bunch bunch of pre-made [stylesheets](https://github.com/isagalaev/highlight.js/tree/master/src/styles).
 
 ## Contributors
 
