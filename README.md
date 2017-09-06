@@ -14,10 +14,16 @@ import RemarkLowlight from 'remark-react-lowlight';
 
 import js from 'highlight.js/lib/languages/javascript';
 
-import merge from 'deepmerge';
-import sanitizeGhSchema from 'hast-util-sanitize/lib/github.json';
+import githubSchema from 'hast-util-sanitize/lib/github.json';
 
-const schema = merge(sanitizeGhSchema, { attributes: { 'code': ['className'] } });
+const schema = Object.assign({}, githubSchema, {
+  attributes: Object.assign({}, githubSchema.attributes, {
+    code: [
+      ...(githubSchema.attributes.code || []),
+      'className'
+    ]
+  })
+});
 
 ...
 {remark().use(reactRenderer, {
