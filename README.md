@@ -36,10 +36,10 @@ Notes
 - You'll need stylings for the classes that [Highlight.js](https://github.com/isagalaev/highlight.js) adds. You can choose from a bunch bunch of pre-made [stylesheets](https://github.com/isagalaev/highlight.js/tree/master/src/styles).
 
 ## Contributors
-
-* [Ryota](https://github.com/rkaneko) - Fixed `props` for the lowlight component. #1
-* [Henrik Lundgren](https://github.com/henriklundgren) - Fixed option property test, allowed skipping inline code tags. #2
-* [Shingo Sato](https://github.com/sugarshin) - Patch duplicate pre tag. #4
+* [Juho Vepsäläinen](https://github.com/bebraw) - Creator and former owner of this project.
+* [Ryota](https://github.com/rkaneko) - Fixed `props` for the lowlight component.
+* [Henrik Lundgren](https://github.com/henriklundgren) - Fixed option property test, allowed skipping inline code tags.
+* [Shingo Sato](https://github.com/sugarshin) - Patch duplicate pre tag.
 
 ## License
 
