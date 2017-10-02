@@ -2,7 +2,7 @@
   "name": "remark-react-lowlight",
   "description": "Syntax highlighting for remark-react through lowlight",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "scripts": {
     "build": "babel src -d lib",
     "watch": "babel src --watch -d lib",
