@@ -8,7 +8,7 @@ import css from 'highlight.js/lib/languages/css';
 
 import RemarkLowlight from '../../lib';
 
-const mdToReact = (markdown) => {
+const mdToReact = (markdown, options) => {
   const schema = merge(sanitizeGhSchema, { attributes: { code: ['className'] } });
 
   return remark().use(reactRenderer, {
@@ -18,7 +18,7 @@ const mdToReact = (markdown) => {
       code: RemarkLowlight({
         js,
         css
-      })
+      }, options)
     }
   }).processSync(markdown).contents;
 };

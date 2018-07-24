@@ -30,4 +30,11 @@ ${codeBlockText}
     const wrapper = mount(mdToReact(markdown));
     assert.ok(wrapper.find('code').hasClass('hljs') && wrapper.find('code').hasClass('css'));
   });
+
+  it('should not guess the language when autodetect is false', () => {
+    const markdown = '```.test { height: 1em; }```';
+    const wrapper = mount(mdToReact(markdown, { autodetect: false }));
+    const elem = wrapper.find('code');
+    assert.ok(!elem.hasClass('hljs') && !elem.hasClass('css'));
+  });
 });

@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Lowlight from 'react-lowlight';
 
-export default (languageDefinitions) => {
+export default (languageDefinitions, options) => {
+  const { autodetect } = Object.assign({
+    autodetect: true
+  }, options);
+
   Object.keys(languageDefinitions).forEach((language) => {
     const definition = languageDefinitions[language];
 
@@ -19,7 +23,9 @@ export default (languageDefinitions) => {
       props.language = language;
     }
 
-    return <Lowlight {...props} />;
+    return (props.language || autodetect) ? <Lowlight {...props} /> : (
+      <code className={className || null}>{children}</code>
+    );
   };
   Code.propTypes = {
     className: PropTypes.string,
